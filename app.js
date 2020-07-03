@@ -28,9 +28,11 @@ soundBoard.addEventListener('click' , e=> {
     }   
     else if(e.target.classList.contains('btn-name')) {
 
-        e.target.parentElement.classList.add('playing')
+        e.target.parentElement.classList.add('playing');
+        audio.src = `sounds/${e.target.getAttribute('data-audio')}.mp3`;
+        audio.play();
         
-        if(e.target.classList.contains('fg')){
+/*         if(e.target.classList.contains('fg')){
             var srcArray = ['sounds/floorGang-1.mp3' , 'sounds/floorGang-2.mp3'];
 
             audio.src = `${srcArray[Math.floor(Math.random() * 2)]}`;
@@ -39,11 +41,10 @@ soundBoard.addEventListener('click' , e=> {
         }else {
             audio.src = `sounds/${e.target.getAttribute('data-audio')}.mp3`;
             audio.play();
-        }
+        } */
          
-    /*   WITHOUT FLOOR GANG   
-        audio.src = `sounds/${e.target.getAttribute('data-audio')}.mp3`;
-        audio.play(); */
+   
+
     }
   
 });
