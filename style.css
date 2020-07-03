@@ -32,6 +32,7 @@ font-family:Arial, Helvetica, sans-serif
 
 }
 header {
+    padding: .2rem 0px;
     font-family: 'MuseoModerno', cursive;
   /*   border: 2px dotted darkgreen; */
     background: rgba(0, 0, 0, .8);
@@ -48,29 +49,56 @@ header {
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    
 }
 .btn {
     margin: 1rem;
+  
+  background-image:  url(pewdiepie-.jpg);
 
-/*     background-image:  url(pewdiepie-.jpg);
     background-size: cover;
-    background-position: center; */
+    background-position: center; 
     border: .1rem solid white;
 }
-.btn:active {
-    transform: scale(1.1);
+/* .btn:active {
+  
+    transform: scale(1.2);
     border: .1rem solid  #ad002b;
+} */
+.playing {
+    transition: all .15s;
+    transform: scale(1.1);
+    
+    
 }
 .btn-name {
+    background: rgba(0, 0, 0, .5);
+    flex-direction: column;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-weight: bold;
 
 }
-
+.btn-name:hover {
+    cursor: pointer;
+}
+.key {
+    font-size: 2.5rem;
+    padding: .4rem;
+ 
+}
+/* .btn-key {
+    font-size: 4rem;
+    border: 2px solid teal;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
 .footer {
     text-align: center;
     background: rgba(0, 0, 0, .8);
@@ -78,12 +106,18 @@ header {
     padding: .2rem 0px;
 }
 
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
+    body {
+        overflow-x: hidden;
+    }
     :root {
         font-size: 9px;
     }
+    .key {
+        display: none;
+    }
 }
+
 @media only screen and (max-width: 500px) {
 
     .soundboard {
